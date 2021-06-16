@@ -1,0 +1,210 @@
+<v-timeline-item
+          fill-dot
+          class="white--text mb-12"
+          color="red"
+          large
+        >
+          <template v-slot:icon>
+            <span>M</span>
+          </template>
+          <v-text-field
+            v-model="input"
+            hide-details
+            flat
+            label="Send trace via email"
+            solo
+            @keydown.enter="comment"
+          >
+              <template v-slot:append>
+
+              <v-btn
+                class="mx-0"
+                depressed
+                @click="comment"
+              
+                >Send
+              </v-btn>
+              </template >
+
+          </v-text-field>
+        </v-timeline-item>
+  
+        <v-slide-x-transition
+          group
+        >
+          <v-timeline-item
+            v-for="event in timeline"
+            :key="event.id"
+            class="mb-4"
+            color="orange"
+            small
+          >
+            <v-row justify="space-between">
+              <v-col cols="7" v-text="event.text"></v-col>
+              <v-col class="text-right" cols="5" v-text="event.time"></v-col>
+            </v-row>
+          </v-timeline-item>
+        </v-slide-x-transition>
+  
+        <v-timeline-item
+          class="mb-6"
+          color="green"
+        >
+        
+          <v-col cols="7">Fokker Services B.V. (H0W98): Fine Thread Bolt (20NR-95) </v-col>         
+          <v-col cols="7">Producer GTIN No: F0210.20NR95.03020 </v-col>
+          <v-col cols="7">Batch Nr.: 3495 </v-col>
+          <v-col cols="7">Quantity: 50 </v-col>
+          <v-btn
+            class="mx-0"
+            color="green"
+          >
+            Update
+          </v-btn>
+          <v-btn
+            class="mx-0"
+            color="green"
+          >
+            Split
+          </v-btn>
+          <v-btn
+            class="mx-0"
+            color="white"
+          >
+            Request
+          </v-btn>
+          <v-btn
+            class="mx-0"
+            color="green"
+          >
+            Release
+          </v-btn>
+        </v-timeline-item>
+  
+     
+        <v-timeline-item
+          class="mb-4"
+          color="red"
+          small
+        >
+          <v-row justify="space-between">
+            <v-col cols="7">Fokker Services B.V. (H0W98) received Fine Thread Bolt (20NR-95) from Airbus Helicopters(F0210).  </v-col>
+             <v-col cols="7">GTIN No: F0210.20NR95.03020 </v-col>
+           
+            <v-col class="text-right" cols="5">16-05-2019</v-col>
+         
+          </v-row>
+         
+
+          <v-btn
+            class="mx-0"
+            color="green"
+          >
+            Show CoC
+          </v-btn>
+           <v-btn
+            class="mx-0"
+            color="red"
+          >
+            Show Certificate
+          </v-btn>
+        </v-timeline-item>
+  
+        <v-timeline-item
+          class="mb-4"
+          hide-dot
+        >
+         
+        </v-timeline-item>
+    
+        <v-timeline-item
+          class="mb-4"
+          small
+        >
+          <v-row justify="space-between">
+            <v-col cols="8">
+              <v-chip
+                class="white--text ml-0"
+                color="blue"
+                label
+                small
+              >
+                TRU Update
+              </v-chip>
+            Airbus Helicopters (F0210) 
+            </v-col>
+             <v-col cols="7">Event Type: Ship  </v-col>
+              <v-col cols="7">Event Data: Fokker Services B.V. </v-col>
+            <v-col class="text-right" cols="5"></v-col>
+          </v-row>
+        </v-timeline-item>  
+           
+       <v-timeline-item
+          class="mb-4"
+          small
+        >
+          <v-row justify="space-between">
+            <v-col cols="8">
+              <v-chip
+                class="white--text ml-0"
+                color="blue"
+                label
+                small
+              >
+                TRU Update
+              </v-chip>
+             Airbus Helicopters (F0210) 
+            </v-col>
+             <v-col cols="7">Event Type: Order Confirm </v-col>
+              <v-col cols="7">Event Data: Fokker Services B.V. </v-col>
+            <v-col class="text-right" cols="5"></v-col>
+          </v-row>
+        </v-timeline-item>   
+            
+      <v-timeline-item
+          class="mb-4"
+          small
+        >
+          <v-row justify="space-between">
+            <v-col cols="8">
+              <v-chip
+                class="white--text ml-0"
+                color="blue"
+                label
+                small
+              >
+                TRU Update
+              </v-chip>
+             Airbus Helicopters (F0210) 
+            </v-col>
+             <v-col cols="7">Event Type: Split </v-col>
+              <v-col cols="7">Event Data: 10  </v-col>
+            <v-col class="text-right" cols="5"></v-col>
+          </v-row>
+        </v-timeline-item>         
+        <v-timeline-item
+          class="mb-4"
+          color="green"
+          small
+        >
+          <v-row justify="space-between">
+            <v-col cols="7">
+              Airbus Helicopters (F0210) produced Fine Thread Bolt (20NR-95)
+            </v-col>
+            <v-col cols="7">GTIN No: F0210.20NR95.03020 </v-col>
+            <v-col cols="7">Batch Nr.: 3495 </v-col>
+            <v-col class="text-right" cols="5">01-01-2019</v-col>
+          </v-row>
+           <v-btn
+            class="mx-0"
+            color="green"
+          >
+            Show CoC
+          </v-btn>
+           <v-btn
+            class="mx-0"
+            color="green"
+          >
+            Show Manufacturer Certificate
+          </v-btn>
+        </v-timeline-item>
